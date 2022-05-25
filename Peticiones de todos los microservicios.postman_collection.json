@@ -169,6 +169,171 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "microservice-products",
+			"item": [
+				{
+					"name": "microservice-personal-product",
+					"item": [
+						{
+							"name": "localhost:8081/personal-products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/personal-products",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"personal-products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/personal-products/create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/personal-products/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"personal-products",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/personal-products/update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/personal-products/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"personal-products",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/personal-products/delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/personal-products/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"personal-products",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "microservice-business-product",
+					"item": [
+						{
+							"name": "localhost:8081/business-products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/business-products",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business-products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/business-products/delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/business-products/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business-products",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/business-products/update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/business-products/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business-products",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/business-products/create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/business-products/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business-products",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
 		}
 	]
 }
