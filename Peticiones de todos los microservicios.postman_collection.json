@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "86925d00-21d6-4d53-8f28-1dbd61102b39",
 		"name": "Peticiones de todos los microservicios",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20914076"
 	},
 	"item": [
 		{
@@ -30,10 +31,38 @@
 							"response": []
 						},
 						{
+							"name": "localhost:8082/personal-customers/\"id\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/personal-customers/628bc05473908688209cd609",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"personal-customers",
+										"628bc05473908688209cd609"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "localhost:8082/personal-customers/create",
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Mauricio Jose\",\r\n    \"lastName\": \"Lopez Sanchez\",\r\n    \"documentNumber\": \"58759863\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "localhost:8082/personal-customers/create",
 									"host": [
@@ -49,18 +78,27 @@
 							"response": []
 						},
 						{
-							"name": "localhost:8082/personal-customer/update",
+							"name": "localhost:8082/personal-customers/update",
 							"request": {
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idPersonalCustomer\": \"628bc05473908688209cd609\",\r\n        \"firstName\": \"Gean Paul Alexander\",\r\n        \"lastName\": \"Arámbulo Aquijes\",\r\n        \"documentNumber\": \"74037468\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "localhost:8082/personal-customer/update",
+									"raw": "localhost:8082/personal-customers/update",
 									"host": [
 										"localhost"
 									],
 									"port": "8082",
 									"path": [
-										"personal-customer",
+										"personal-customers",
 										"update"
 									]
 								}
@@ -73,14 +111,15 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8082/personal-customers/delete",
+									"raw": "localhost:8082/personal-customers/delete/629089c80e78335c36f8beec",
 									"host": [
 										"localhost"
 									],
 									"port": "8082",
 									"path": [
 										"personal-customers",
-										"delete"
+										"delete",
+										"629089c80e78335c36f8beec"
 									]
 								}
 							},
@@ -97,13 +136,33 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8082/business-customers",
+									"raw": "localhost:8082/business-customers/",
 									"host": [
 										"localhost"
 									],
 									"port": "8082",
 									"path": [
-										"business-customers"
+										"business-customers",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8082/business-customers/\"id\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/business-customers/628bc1b573908688209cd60c",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"business-customers",
+										"628bc1b573908688209cd60c"
 									]
 								}
 							},
@@ -114,6 +173,15 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n    {\r\n        \"businessName\": \"Plaza Vea\",\r\n        \"rucNumber\": \"20586985659\",\r\n        \"signaturies\":[ \"Luis Castro\"],\r\n        \"headlines\": [\"Luis Castro\"]\r\n    }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "localhost:8082/business-customers/create",
 									"host": [
@@ -129,18 +197,27 @@
 							"response": []
 						},
 						{
-							"name": "localhost:8082/business-customer/update",
+							"name": "localhost:8082/business-customers/update",
 							"request": {
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idBusinessCustomer\": \"6290934514d0fc785bbd3aa6\",\r\n        \"businessName\": \"Plaza Vea Huacho\",\r\n        \"rucNumber\": \"20586985659\",\r\n        \"signaturies\": [\r\n            \"Luis Castro\"\r\n        ],\r\n        \"headlines\": [\r\n            \"Luis Castro\"\r\n        ]\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "localhost:8082/business-customer/update",
+									"raw": "localhost:8082/business-customers/update",
 									"host": [
 										"localhost"
 									],
 									"port": "8082",
 									"path": [
-										"business-customer",
+										"business-customers",
 										"update"
 									]
 								}
@@ -153,14 +230,15 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8082/business-customers/delete",
+									"raw": "localhost:8082/business-customers/delete/6290934514d0fc785bbd3aa6",
 									"host": [
 										"localhost"
 									],
 									"port": "8082",
 									"path": [
 										"business-customers",
-										"delete"
+										"delete",
+										"6290934514d0fc785bbd3aa6"
 									]
 								}
 							},
@@ -171,42 +249,70 @@
 			]
 		},
 		{
-			"name": "microservice-products",
+			"name": "microservice-accounts",
 			"item": [
 				{
-					"name": "microservice-personal-product",
+					"name": "savings-accounts",
 					"item": [
 						{
-							"name": "localhost:8081/personal-products",
+							"name": "localhost:8081/savings-accounts",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8081/personal-products",
+									"raw": "localhost:8081/savings-accounts",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
-										"personal-products"
+										"savings-accounts"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "localhost:8081/personal-products/create",
+							"name": "localhost:8081/savings-accounts/\"id\"",
 							"request": {
-								"method": "POST",
+								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8081/personal-products/create",
+									"raw": "localhost:8081/savings-accounts/629181acc5231b31d41b86b5",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
-										"personal-products",
+										"savings-accounts",
+										"629181acc5231b31d41b86b5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/savings-accounts/create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeAccount\":\"Cuenta de ahorro\",\r\n    \"numberAccount\":\"6985347898521\",\r\n    \"accountBalance\":200,\r\n    \"maintenanceCost\":2,\r\n    \"movementLimit\":12,\r\n    \"idCustomer\": \"628bc12073908688209cd60b\"\r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/savings-accounts/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"savings-accounts",
 										"create"
 									]
 								}
@@ -214,18 +320,27 @@
 							"response": []
 						},
 						{
-							"name": "localhost:8081/personal-products/update",
+							"name": "localhost:8081/savings-accounts/update",
 							"request": {
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idSavingsAccount\": \"629181acc5231b31d41b86b5\",\r\n        \"typeAccount\": \"Cuenta de ahorro\",\r\n        \"numberAccount\": \"3658975841258\",\r\n        \"accountBalance\": 500.0,\r\n        \"maintenanceCost\": 2.0,\r\n        \"movementLimit\": 15,\r\n        \"idCustomer\": \"628bc05473908688209cd609\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "localhost:8081/personal-products/update",
+									"raw": "localhost:8081/savings-accounts/update",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
-										"personal-products",
+										"savings-accounts",
 										"update"
 									]
 								}
@@ -233,19 +348,20 @@
 							"response": []
 						},
 						{
-							"name": "localhost:8081/personal-products/delete",
+							"name": "localhost:8081/savings-accounts/delete/\"id\"",
 							"request": {
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8081/personal-products/delete",
+									"raw": "localhost:8081/savings-accounts/delete/6291884afd972c3359ea9de7",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
-										"personal-products",
-										"delete"
+										"savings-accounts",
+										"delete",
+										"6291884afd972c3359ea9de7"
 									]
 								}
 							},
@@ -254,58 +370,95 @@
 					]
 				},
 				{
-					"name": "microservice-business-product",
+					"name": "fixedTerm-accounts",
 					"item": [
 						{
-							"name": "localhost:8081/business-products",
+							"name": "localhost:8081/fixedterm-accounts",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8081/business-products",
+									"raw": "localhost:8081/fixedterm-accounts",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
-										"business-products"
+										"fixedterm-accounts"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "localhost:8081/business-products/delete",
+							"name": "localhost:8081/fixedterm-accounts/\"id\"",
 							"request": {
-								"method": "DELETE",
+								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8081/business-products/delete",
+									"raw": "localhost:8081/fixedterm-accounts/62919295c78fd02ccf2a4d7b",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
-										"business-products",
-										"delete"
+										"fixedterm-accounts",
+										"62919295c78fd02ccf2a4d7b"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "localhost:8081/business-products/update",
+							"name": "localhost:8081/fixedterm-accounts/create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeAccount\":\"Cuenta a plazo fijo\",\r\n    \"numberFixedTermAccount\":\"4569832514785\",\r\n    \"accountBalance\": 1000,\r\n    \"movementLimit\":1,\r\n    \"moveDate\":\"25/05/2022\",\r\n    \"idCustomer\":\"628bc05473908688209cd609\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/fixedterm-accounts/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"fixedterm-accounts",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/fixedterm-accounts/update",
 							"request": {
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idFixedTermAccount\": \"62919295c78fd02ccf2a4d7b\",\r\n        \"typeAccount\": \"Cuenta a plazo fijo\",\r\n        \"numberFixedTermAccount\": \"3654789852145\",\r\n        \"accountBalance\": 2000.0,\r\n        \"movementLimit\": 2,\r\n        \"moveDate\": \"15/05/2022\",\r\n        \"idCustomer\": \"628bc05473908688209cd609\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "localhost:8081/business-products/update",
+									"raw": "localhost:8081/fixedterm-accounts/update",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
-										"business-products",
+										"fixedterm-accounts",
 										"update"
 									]
 								}
@@ -313,25 +466,262 @@
 							"response": []
 						},
 						{
-							"name": "localhost:8081/business-products/create",
+							"name": "localhost:8081/fixedterm-accounts/delete/\"id\"",
 							"request": {
-								"method": "POST",
+								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8081/business-products/create",
+									"raw": "localhost:8081/fixedterm-accounts/delete/629192d3c78fd02ccf2a4d7c",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
-										"business-products",
-										"create"
+										"fixedterm-accounts",
+										"delete",
+										"629192d3c78fd02ccf2a4d7c"
 									]
 								}
 							},
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "currents-accounts",
+					"item": [
+						{
+							"name": "localhost:8081/current-accounts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/current-accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"current-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/current-accounts/\"id\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/current-accounts/62919dc3de251d75287fdfd2",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"current-accounts",
+										"62919dc3de251d75287fdfd2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/current-accounts/create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeAccount\":\"Cuenta corriente\",\r\n    \"numberCurrentAccount\":\"0000369128751\",\r\n    \"accountBalance\":5000,\r\n    \"maintenanceCost\":50,\r\n    \"idCustomer\":\"628bc12073908688209cd60b\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/current-accounts/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"current-accounts",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/current-accounts/update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idCurrentAccount\": \"62919dc3de251d75287fdfd2\",\r\n        \"typeAccount\": \"Cuenta corriente\",\r\n        \"numberCurrentAccount\": \"5698712364985\",\r\n        \"accountBalance\": 3000.0,\r\n        \"maintenanceCost\": 10.0,\r\n        \"idCustomer\": \"628bc1b573908688209cd60c\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/current-accounts/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"current-accounts",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/current-accounts/delete/\"id\"",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/current-accounts/delete/62919de2de251d75287fdfd3",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"current-accounts",
+										"delete",
+										"62919de2de251d75287fdfd3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "microservice-credits",
+			"item": [
+				{
+					"name": "localhost:8083/credits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/credits",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8083/credits/\"id\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/credits/6291a9ae03bf404795219c62",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"6291a9ae03bf404795219c62"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8083/credits/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeCredit\":\"Credito Personal\",\r\n    \"numberCredit\":\"231986542985\",\r\n    \"creditAmount\":4000,\r\n    \"availableBalance\":4000,\r\n    \"idCustomer\":\"628bc1b573908688209cd60c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/credits/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8083/credits/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idCredit\": \"6291a98d03bf404795219c61\",\r\n        \"typeCredit\": \"Credito Personal\",\r\n        \"numberCredit\": \"365498651235\",\r\n        \"creditAmount\": 8000.0,\r\n        \"availableBalance\": 8000.0,\r\n        \"idCustomer\": \"628bc12073908688209cd60b\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/credits/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8083/credits/delete/\"id\"",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/credits/delete/6291a98d03bf404795219c61",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"delete",
+								"6291a98d03bf404795219c61"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
