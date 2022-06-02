@@ -124,6 +124,86 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "localhost:8082/personal-customer/credits/\"idCustomerNatural\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/personal-customers/credits/628bc05473908688209cd609",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"personal-customers",
+										"credits",
+										"628bc05473908688209cd609"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8082/personal-customers/savings-account/\"idCustomerNatural\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/personal-customers/savings-account/628bc12073908688209cd60b",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"personal-customers",
+										"savings-account",
+										"628bc12073908688209cd60b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8082/personal-customers/current-account/customer/\"idCustomerNatural\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/personal-customers/current-account/628bc12073908688209cd60b",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"personal-customers",
+										"current-account",
+										"628bc12073908688209cd60b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8082/personal-customers/fixedterm-account/\"idPersonaNatural\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/personal-customers/fixedterm-account/628bc05473908688209cd609",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"personal-customers",
+										"fixedterm-account",
+										"628bc05473908688209cd609"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -239,6 +319,46 @@
 										"business-customers",
 										"delete",
 										"6290934514d0fc785bbd3aa6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8082/business-customers/credits/\"idCustomerJuridico\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/business-customers/credits/628bc1b573908688209cd60c",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"business-customers",
+										"credits",
+										"628bc1b573908688209cd60c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8082/business-customers/current-account/\"idCustomerBusiness\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/business-customers/current-account/628bc1b573908688209cd60c",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"business-customers",
+										"current-account",
+										"628bc1b573908688209cd60c"
 									]
 								}
 							},
@@ -366,6 +486,26 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "localhost:8081/savings-accounts/personalcustomer/\"idCustomerPersonal\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/savings-accounts/personalcustomer/628bc05473908688209cd609",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"savings-accounts",
+										"personalcustomer",
+										"628bc05473908688209cd609"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -416,7 +556,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"typeAccount\":\"Cuenta a plazo fijo\",\r\n    \"numberFixedTermAccount\":\"4569832514785\",\r\n    \"accountBalance\": 1000,\r\n    \"movementLimit\":1,\r\n    \"moveDate\":\"25/05/2022\",\r\n    \"idCustomer\":\"628bc05473908688209cd609\"\r\n}",
+									"raw": "{\r\n    \"typeAccount\":\"Cuenta a plazo fijo\",\r\n    \"numberFixedTermAccount\":\"5896316489612\",\r\n    \"accountBalance\": 1060000,\r\n    \"movementLimit\":1,\r\n    \"moveDate\":\"25/05/2022\",\r\n    \"idCustomer\":\"628bc05473908688209cd609\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -480,6 +620,26 @@
 										"fixedterm-accounts",
 										"delete",
 										"629192d3c78fd02ccf2a4d7c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8081/fixedterm-accounts/customer/\"idCustomer\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/fixedterm-accounts/customer/628bc05473908688209cd609",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"fixedterm-accounts",
+										"customer",
+										"628bc05473908688209cd609"
 									]
 								}
 							},
@@ -602,6 +762,26 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "localhost:8081/current-accounts/customer/\"idCustomerNaturaloidCustiomerJuridico\"",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/current-accounts/customer/628bc1b573908688209cd60c",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"current-accounts",
+										"customer",
+										"628bc1b573908688209cd60c"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				}
@@ -629,7 +809,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:8083/credits/\"id\"",
+					"name": "localhost:8083/credits/\"id-credit\"",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -654,7 +834,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"typeCredit\":\"Credito Personal\",\r\n    \"numberCredit\":\"231986542985\",\r\n    \"creditAmount\":4000,\r\n    \"availableBalance\":4000,\r\n    \"idCustomer\":\"628bc1b573908688209cd60c\"\r\n}",
+							"raw": "{\r\n    \"typeCredit\":\"Credito Empresarial\",\r\n    \"numberCredit\":\"1236986542548\",\r\n    \"creditAmount\":7000,\r\n    \"availableBalance\":7000,\r\n    \"idCustomer\":\"628bc1b573908688209cd60c\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -682,7 +862,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"idCredit\": \"6291a98d03bf404795219c61\",\r\n        \"typeCredit\": \"Credito Personal\",\r\n        \"numberCredit\": \"365498651235\",\r\n        \"creditAmount\": 8000.0,\r\n        \"availableBalance\": 8000.0,\r\n        \"idCustomer\": \"628bc12073908688209cd60b\"\r\n    }",
+							"raw": "{\r\n        \"idCredit\": \"6291a9dd03bf404795219c63\",\r\n        \"typeCredit\": \"Credito Empresarial\",\r\n        \"numberCredit\": \"35654128541\",\r\n        \"creditAmount\": 6000.0,\r\n        \"availableBalance\": 6000.0,\r\n        \"idCustomer\": \"628bc1b573908688209cd60c\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -718,6 +898,46 @@
 								"credits",
 								"delete",
 								"6291a98d03bf404795219c61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8083/credits/credit-personal/\"idCustomer\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/credits/credit-personal/628bc05473908688209cd609",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"credit-personal",
+								"628bc05473908688209cd609"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8083/credits/credit-business/\"idCustomer\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/credits/credit-business/628bc1b573908688209cd60c",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credits",
+								"credit-business",
+								"628bc1b573908688209cd60c"
 							]
 						}
 					},
